@@ -1,0 +1,32 @@
+{
+
+   "bridge": {
+   "name": "mac_bridge",
+   "username": "CC:22:3D:E3:CE:28",
+   "port": 51826,
+   "pin": "111-11-111"
+   },
+
+   "description": "This is an example configuration file. You can use this as a template for creating your own configuration file.",
+
+   "accessories": [{
+      "accessory": "HTTP-RGB",
+      "name": "RGB Strip",
+      "service": "Light",
+
+      "switch": {
+         "status": "http://192.168.86.14:80/status",
+         "powerOn": "http://192.168.86.14:80/on",
+         "powerOff": "http://192.168.86.14:80/off"
+      },
+
+      "color": {
+         "status": "http://192.168.86.14:80/color",
+         "url": "http://192.168.86.14:80/set/%s",
+         "brightness": true
+      }
+   }],
+
+   "platforms": []
+
+}
